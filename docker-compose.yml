@@ -1,0 +1,23 @@
+version: '3'
+services:
+  nats:
+    image: "nats"
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+  worker_1:
+    image: nats-fibonacci-worker
+    depends_on:
+      - nats
+  worker_2:
+    image: nats-fibonacci-worker
+    depends_on:
+      - nats
+  worker_3:
+    image: nats-fibonacci-worker
+    depends_on:
+      - nats
+  worker_4:
+    image: nats-fibonacci-worker
+    depends_on:
+      - nats
