@@ -5,6 +5,14 @@ services:
     ports:
       - "4222:4222"
       - "8222:8222"
+  publisher_1:
+    image: nats-fibonacci-publisher
+    depends_on:
+      - nats
+  publisher_2:
+    image: nats-fibonacci-publisher
+    depends_on:
+      - nats
   worker_1:
     image: nats-fibonacci-worker
     depends_on:
