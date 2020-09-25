@@ -9,6 +9,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "nats": "^1.2.2"
+    "nats": "^1.4.12"
   }
 }

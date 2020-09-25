@@ -1,4 +1,4 @@
-FROM node:10.15.0-alpine
+FROM node:14.11.0-alpine
 ADD . /app
 WORKDIR /app
 RUN npm i

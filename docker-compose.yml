@@ -1,31 +1,12 @@
 version: '3'
 services:
   nats:
-    image: "nats"
-    ports:
-      - "4222:4222"
-      - "8222:8222"
-  publisher_1:
+    image: "nats:2.1.8-alpine"
+  publisher:
     image: nats-fibonacci-publisher
     depends_on:
       - nats
-  publisher_2:
-    image: nats-fibonacci-publisher
-    depends_on:
-      - nats
-  worker_1:
-    image: nats-fibonacci-worker
-    depends_on:
-      - nats
-  worker_2:
-    image: nats-fibonacci-worker
-    depends_on:
-      - nats
-  worker_3:
-    image: nats-fibonacci-worker
-    depends_on:
-      - nats
-  worker_4:
+  worker:
     image: nats-fibonacci-worker
     depends_on:
       - nats
